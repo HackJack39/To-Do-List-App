@@ -35,7 +35,7 @@ Aplicación web sencilla para gestionar tareas. Permite añadir, marcar como com
 ## ▶️ Instalación y uso
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/to-do-app.git
+   git clone https://github.com/HackJack39/To-Do-List-App
 
 2. Entra en la carpeta del proyecto:
 
@@ -51,4 +51,5 @@ Este proyecto está bajo la licencia MIT. Puedes usarlo y modificarlo libremente
 👤 Autor
 
 Tu Nombre
+
 🔗 GitHub: https://github.com/HackJack39
