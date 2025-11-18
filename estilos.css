@@ -1,0 +1,169 @@
+/* Estilos generales de la aplicación */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Encabezado */
+h1 {
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Contenedor de entrada (input y botón) */
+.contenedor {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Caja de texto (input) */
+#nueva-tarea {
+  flex-grow: 1;
+  max-width: 400px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Botón Añadir */
+#boton-tarea {
+  width: 100px;
+  flex-shrink: 0;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Efecto Hover del Botón (Elevación y color más oscuro) */
+#boton-tarea:hover {
+  background-color: red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Contenedor de la Lista (La Tarjeta) */
+#lista-tareas {
+  list-style-type: none;
+  padding: 15px 20px;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilo de Cada Elemento de la Lista (LI) */
+#lista-tareas li {
+  padding: 12px 0;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  transition: background-color 0.2s ease;
+}
+
+/* Eliminar la línea divisoria del último elemento */
+#lista-tareas li:last-child {
+  border-bottom: none;
+}
+
+/* Efecto Hover de la Tarea (Sutil resalte) */
+#lista-tareas li:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}
+
+/* Estilo del Checkbox para separarlo del texto */
+#lista-tareas li input[type="checkbox"] {
+  margin-right: 15px;
+  transform: scale(1.2);
+  min-width: 20px;
+  cursor: pointer;
+}
+
+/* Estilo de la etiqueta del texto para que ocupe el resto del espacio */
+#lista-tareas li label {
+  flex-grow: 1;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+#lista-tareas li label.editando {
+  cursor: text;
+}
+
+/* Estilos de Tarea Completada (Aplicado al label cuando el LI tiene la clase .completada) */
+.completada label {
+  color: #b5b5b5;
+  text-decoration: line-through;
+  transition: color 0.4s ease;
+}
+
+/* Estilo para el botón de eliminar */
+.boton-eliminar {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #cc0000;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.boton-eliminar:hover {
+  opacity: 1;
+  color: #ff0000;
+}
+
+/* Estilo para el botón de edición */
+.boton-editar {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 10px; /* Espacio entre editar y quitar */
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.boton-editar:hover {
+  opacity: 1;
+}
+
+/* Estilo para el label cuando está en modo edición */
+.editando {
+  border-bottom: 2px solid #4a90e2; /* Línea que indica que se está editando */
+  outline: none; /* Elimina el borde de foco nativo */
+  padding-bottom: 1px;
+  cursor: text;
+}
+
+/* Ajustamos el margen del botón eliminar para que quede a la derecha del botón editar */
+.boton-eliminar {
+  margin-left: auto;
+}
