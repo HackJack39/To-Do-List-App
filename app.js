@@ -62,8 +62,8 @@ function cargarTareas() {
 
     let label = document.createElement("label");
     label.textContent = tarea.texto;
-    label.contentEditable = false; // ✅ Solución: Aseguramos que NO sea editable al inicio
-    label.classList.add("estado-lectura"); // ✅ Solución: Estado por defecto
+    label.contentEditable = false; // Aseguramos que no sea editable al inicio
+    label.classList.add("estado-lectura"); // Estado por defecto
 
     // Botón de editar
     let botonEditar = document.createElement("button");
@@ -176,20 +176,20 @@ botonTarea.addEventListener("click", function () {
         // --- MODO EDITAR ---
         label.contentEditable = true;
         label.classList.remove("estado-lectura");
-        botonEditar.textContent = "✔️"; // Muestra el check
+        botonEditar.textContent = "✔️";  
         label.focus();
-        label.classList.add("editando"); // Clase visual
+        label.classList.add("editando"); 
       } else {
         // --- MODO GUARDAR ---
         label.contentEditable = false;
         label.classList.add("estado-lectura");
-        botonEditar.textContent = "✏️"; // Vuelve al lápiz
+        botonEditar.textContent = "✏️"; 
         label.classList.remove("editando");
         guardarTareas();
       }
     });
 
-    // Opcional: Permitir guardar al presionar Enter durante la edición
+    // Permite guardar al presionar Enter durante la edición
     label.addEventListener("keypress", function (e) {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -212,3 +212,4 @@ botonTarea.addEventListener("click", function () {
 
 // LLAMADA FINAL DE INICIO
 cargarTareas();
+
