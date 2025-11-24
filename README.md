@@ -50,6 +50,7 @@ Este proyecto está bajo la licencia MIT. Puedes usarlo y modificarlo libremente
 
 👤 Autor
 
-Tu Nombre
+Jacobo León
 
 🔗 GitHub: https://github.com/HackJack39
+
