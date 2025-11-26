@@ -14,7 +14,7 @@ function guardarTareas() {
 
   // 3. Recorrer cada elemento <li>
   listaItems.forEach((li) => {
-    // En tu estructura, el texto está en el <label>
+    // En la estructura, el texto está en el <label>
     const texto = li.querySelector("label").textContent;
 
     // Verifica si el <li> contiene la clase 'completada'
@@ -141,8 +141,8 @@ botonTarea.addEventListener("click", function () {
 
     let label = document.createElement("label");
     label.textContent = textoTarea;
-    label.contentEditable = false; // ✅ Solución: Estado por defecto
-    label.classList.add("estado-lectura"); // ✅ Solución: Estado por defecto
+    label.contentEditable = false; // 
+    label.classList.add("estado-lectura"); // 
 
     // Botón para editar tarea
     let botonEditar = document.createElement("button");
@@ -212,4 +212,5 @@ botonTarea.addEventListener("click", function () {
 
 // LLAMADA FINAL DE INICIO
 cargarTareas();
+
 
